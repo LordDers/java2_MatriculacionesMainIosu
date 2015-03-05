@@ -40,8 +40,11 @@ public class Alumnos{
 			for(int i=0; i<alumnos.size(); i++){
 				formatted+=formatted+"Alumno: "+obtainAlumno(i).formatted()+"\n";
 			}		
-		}catch (Exception e){			
+		}catch(NullPointerException e){
 				System.err.println("No hay alumnos Matriculados");
+				formatted="";		
+		}catch (Exception e){			
+				System.err.println(e);
 				formatted="";
 		}
 		return formatted;
