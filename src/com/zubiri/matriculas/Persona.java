@@ -1,10 +1,27 @@
 package com.zubiri.matriculas;
 
+import java.util.Scanner;
+
 public abstract class Persona {
 	
-	String dni;
-	String nombre;
-	String apellido;
+	private String dni;
+	private String nombre;
+	private String apellido;
+
+	public Persona(String dni,String nombre,String apellido){
+		setDni(dni);
+		setNombre(nombre);
+		setApellido(apellido);
+	}
+
+	public Persona(Scanner sc){
+		System.out.println("Dni: ");
+		setDni(sc.next());
+		System.out.println("nombre: ");
+		setNombre(sc.next());
+		System.out.println("Apellido: ");
+		setApellido(sc.next());
+	}	
 
 	public String getDni() {
 		return dni;
@@ -31,7 +48,7 @@ public abstract class Persona {
 	}
 	
 	/**
-	 * Método que retorna un String con los valores de las propiedades
+	 * Metodo que retorna un String con los valores de las propiedades
 	 * formateados del siguiente modo:
 	 *  <NOMBRE_PROPIEDAD1> : <VALOR_PROPIEDAD1>\n
 	 *  <NOMBRE_PROPIEDAD2> : <VALOR_PROPIEDAD2>\n 
@@ -40,14 +57,19 @@ public abstract class Persona {
 	 */
 	
 	public String formatted() {
-		
+		String formatted=
+		"\nDni: "+this.dni+
+		"\nNombre: "+this.nombre+
+		"\nApellido: "+this.apellido;
+		return formatted;
 	}
 	
 	/**
-	 * Método que obtiene valores de una persona a partir de un String y 
+	 * Metodo que obtiene valores de una persona a partir de un String y 
 	 * un caracter separador.
 	 */
 	public void split(String personaStr, char separator) {
-		
+		String separador = separator+"";
+		String [] separados = personaStr.split(separador);
 	}
 }
