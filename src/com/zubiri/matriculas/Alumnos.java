@@ -41,7 +41,7 @@ public class Alumnos{
 				formatted+=formatted+"Alumno: "+obtainAlumno(i).formatted()+"\n";
 			}		
 		}catch (Exception e){			
-				System.err.println(e);
+				System.err.println("No hay alumnos Matriculados");
 				formatted="";
 		}
 		return formatted;
