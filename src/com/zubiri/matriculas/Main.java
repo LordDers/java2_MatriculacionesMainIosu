@@ -9,7 +9,7 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 		
-		int seleccion=0;
+		int seleccion=-1;
 		Scanner sc = new Scanner(System.in);
 
 		do {
@@ -44,7 +44,7 @@ public class Main {
 				sc.nextLine();
 			}
 		} while (seleccion != 0);
-		System.out.println("Gracias por usar nuestro programa. Que tenga un buen día!");
+		System.out.println("Gracias por usar mi programa. Que tenga un buen día!");
 		sc.close();
 	}
 }
