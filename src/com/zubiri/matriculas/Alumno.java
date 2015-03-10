@@ -12,7 +12,8 @@ public class Alumno extends Persona {
 	private String ciclo = null;
 	
 	//Matriculas realizadas a lo largo de los anos en las distintas asignaturas
-	private ArrayList<Matricula> matriculas = null;
+	//private ArrayList<Matricula> matriculas = null;
+	private ArrayList<Matricula> matriculas = new ArrayList<Matricula>();
 
 	public Alumno(String dni,String nombre,String apellido,int anoInscripcion,String ciclo,ArrayList<Matricula> matriculas){
 		super(dni, nombre, apellido);
@@ -33,7 +34,7 @@ public class Alumno extends Persona {
 			}
 		}while(getAnoInscripcion()==-1);	
 		System.out.println("Ciclo formativo: ");
-		setCiclo(ciclo);
+		setCiclo(sc.next());
 		System.out.println("Cuantas matriculas ha realizado a lo largo de los anos en las distintas asignaturas?");
 		int n = sc.nextInt();
 		for(int i=0;i<n;i++){

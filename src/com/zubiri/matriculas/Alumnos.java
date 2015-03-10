@@ -5,14 +5,15 @@ import java.util.ArrayList;
 
 public class Alumnos{
 	
-	private static ArrayList<Alumno> alumnos = null;
+	//private static ArrayList<Alumno> alumnos = null;
+	private static ArrayList<Alumno> alumnos = new ArrayList<Alumno>();
 
     public Alumnos(ArrayList<Alumno>alumnos){
     	setAlumnos(alumnos);
 	}
    	
 	public static ArrayList<Alumno> getAlumnos() throws Exception{
-		if (getAlumnos() == null) {
+		if (alumnos.size() == 0) {
 			throw new Exception("No hay alumnos matriculados");
 		}
 			return alumnos;
@@ -44,7 +45,7 @@ public class Alumnos{
 				System.err.println("No hay alumnos Matriculados");
 				formatted="";		
 		}catch (Exception e){			
-				System.err.println(e);
+				System.err.println(e+ "aa");
 				formatted="";
 		}
 		return formatted;
